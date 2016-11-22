@@ -26,7 +26,7 @@ urlfor() {
     ver=$1
     file=$2
     case $ver in
-    go1.0*|go1.1beta*|go1.1rc*|go1.1|go1.1.*|go1.2beta*|go1.2rc*|go1.2|go1.2.|go1.3|go1.3.1|go1.3.2|go1.3.3|go1.4|go1.4.1|go1.4.2|go1.4.3|go1.5|go1.5.1|go1.5.2|go1.5.3|go1.5.4|go1.6|go1.6.1|go1.6.2|go1.6.3)
+    go1.0*|go1.1beta*|go1.1rc*|go1.1|go1.1.*|go1.2beta*|go1.2rc*|go1.2|go1.2.1)
         echo http://go.googlecode.com/files/$file
         ;;
     *)
@@ -66,7 +66,7 @@ then
 elif test -f $build/.godir
 then
     name=$(cat $build/.godir)
-    ver=go${GOVERSION:-1.4}
+    ver=go${GOVERSION:-1.7.1}
 else
     echo >&2 " !     A .godir is required. For instructions:"
     echo >&2 " !     http://mmcgrana.github.io/2012/09/getting-started-with-go-on-heroku"
